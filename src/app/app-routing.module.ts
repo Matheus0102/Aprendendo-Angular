@@ -10,7 +10,7 @@ const routes: Routes = [
     path:'', component: HomeComponent
   },
   {
-    path:'Home', component: HomeComponent 
+    path:'home', component: HomeComponent 
   },
   {
     path:'index', component: HomeComponent
@@ -19,7 +19,7 @@ const routes: Routes = [
     path:'produtos', component: ProdutosComponent
   },
   {
-    path:'Contato', component: ContatoComponent
+    path:'contato', component: ContatoComponent
   },
   {
     path:'login', component: LoginComponent
