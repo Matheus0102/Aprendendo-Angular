@@ -14,8 +14,11 @@
             <div class="col-1">
                 <div class="d-flex h-100 align-items-center corFundo">
                     <div class="p-2 flex-grow-1 cor">
-                        <button id="button" onclick="mudarFonte()">Aumente
-                        a fonte ou diminua</button>
+                        <li class="nav justify-content-end">
+                            <button (click)="setFontSize('a-')">A-</button>
+                            <button (click)="setFontSize('a')">A</button>
+                            <button (click)="setFontSize('a+')">A+</button>
+                        </li>      
                     </div>
                 </div>        
             </div>
