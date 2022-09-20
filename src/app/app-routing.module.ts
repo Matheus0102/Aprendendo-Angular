@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ContatoComponent } from './Telas/contato/contato.component';
-import { HomeComponent } from './Telas/home/home.component';
-import { LoginComponent } from './Telas/login/login.component';
-import { ProdutosComponent } from './Telas/produtos/produtos.component';
+import { CadastroCreateComponent } from './telas/cadastro/cadastro-create/cadastro-create.component';
+import { ContatoComponent } from './telas/contato/contato.component';
+import { HomeComponent } from './telas/home/home.component';
+import { LoginComponent } from './telas/login/login.component';
+import { ProdutosComponent } from './telas/produtos/produtos.component';
 
 const routes: Routes = [
   {
@@ -24,6 +25,9 @@ const routes: Routes = [
   {
     path:'login', component: LoginComponent
   },
+  {
+    path:'cadastro', component: CadastroCreateComponent
+  }
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

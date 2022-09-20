@@ -15,5 +15,17 @@
       "senha": "Miranda",
       "id": 3
     }
+  ],
+  "Produtos": [
+    {
+      "Item": "Xbox 360",
+      "Qtd": "1",
+      "id": 1
+    },
+    {
+      "Item": "playstation 5",
+      "Qtd": "1",
+      "id": 2
+    }
   ]
 }

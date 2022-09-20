@@ -6,17 +6,18 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 //Telas
-import { HomeComponent } from './Telas/home/home.component';
-import { LoginComponent } from './Telas/login/login.component';
-import { ProdutosComponent } from './Telas/produtos/produtos.component';
-import { ContatoComponent } from './Telas/contato/contato.component';
+import { HomeComponent } from './telas/home/home.component';
+import { LoginComponent } from './telas/login/login.component';
+import { ProdutosComponent } from './telas/produtos/produtos.component';
+import { ContatoComponent } from './telas/contato/contato.component';
 
 //componentes
-import { HeaderComponent } from './Components/header/header.component';
-import { FooterComponent } from './Components/footer/footer.component';
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 //Angular Forms
 import { FormsModule } from '@angular/forms';
+import { CadastroCreateComponent } from './telas/cadastro/cadastro-create/cadastro-create.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { FormsModule } from '@angular/forms';
     ProdutosComponent,
     ContatoComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    CadastroCreateComponent
   ],
   imports: [
     BrowserModule,
