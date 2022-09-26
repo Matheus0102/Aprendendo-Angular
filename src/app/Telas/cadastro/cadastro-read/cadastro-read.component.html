@@ -1,0 +1,16 @@
+<div class="corpo">
+    <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+        <div class="Tela-Login">
+            <h1>Cadastra-se</h1>
+            <input type="text" name="nome" ngModel placeholder="Nome" id="nome">
+            <br><br>
+            <input type="Password" name="senha" ngModel placeholder="Senha" id="senha">
+            <br><br>
+            <button type="submit">Enviar</button>
+            <button type="submit">Cancelar</button>
+            <a href="/cadastro-tabela">
+                <button type="submit">Mostrar Cadastros</button>
+            </a>
+        </div>
+    </form>
+</div>

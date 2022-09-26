@@ -1,32 +1,36 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CadastroCreateComponent } from './telas/cadastro/cadastro-create/cadastro-create.component';
-import { ContatoComponent } from './telas/contato/contato.component';
-import { HomeComponent } from './telas/home/home.component';
-import { LoginComponent } from './telas/login/login.component';
-import { ProdutosComponent } from './telas/produtos/produtos.component';
+import { CadastroReadComponent } from './Telas/cadastro/cadastro-read/cadastro-read.component';
+import { ContatoComponent } from './Telas/contato/contato.component';
+import { HomeComponent } from './Telas/home/home.component';
+import { LoginComponent } from './Telas/login/login.component';
+import { ProdutosReadComponent } from './Telas/produtos/produtos-read/produtos-read.component';
+import { CadastroTabelaComponent } from './Telas/cadastro/cadastro-tabela/cadastro-tabela.component';
 
 const routes: Routes = [
   {
-    path:'', component: HomeComponent
+    path: '', component: HomeComponent
   },
   {
-    path:'home', component: HomeComponent 
+    path: 'home', component: HomeComponent
   },
   {
-    path:'index', component: HomeComponent
+    path: 'index', component: HomeComponent
   },
   {
-    path:'produtos', component: ProdutosComponent
+    path: 'produtos', component: ProdutosReadComponent
   },
   {
-    path:'contato', component: ContatoComponent
+    path: 'contato', component: ContatoComponent
   },
   {
-    path:'login', component: LoginComponent
+    path: 'login', component: LoginComponent
   },
   {
-    path:'cadastro', component: CadastroCreateComponent
+    path: 'cadastro', component: CadastroReadComponent
+  },
+  {
+    path:'cadastrotabela', component: CadastroTabelaComponent
   }
 ];
 @NgModule({

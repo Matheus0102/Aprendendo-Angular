@@ -11,18 +11,9 @@ import { NgForm } from '@angular/forms';
 })
 export class CadastroCreateComponent implements OnInit {
 
-  cadastro: Cadastro = {
-    nome: '',
-    senha:' '
-  }
-
   constructor() { }
 
   ngOnInit(): void {
-  }
-
-  onSubmit(form: NgForm) {
-    
   }
 
 }

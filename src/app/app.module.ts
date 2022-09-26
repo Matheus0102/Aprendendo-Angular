@@ -6,29 +6,45 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 //Telas
-import { HomeComponent } from './telas/home/home.component';
-import { LoginComponent } from './telas/login/login.component';
-import { ProdutosComponent } from './telas/produtos/produtos.component';
-import { ContatoComponent } from './telas/contato/contato.component';
+import { HomeComponent } from './Telas/home/home.component';
+import { LoginComponent } from './Telas/login/login.component';
+import { ContatoComponent } from './Telas/contato/contato.component';
 
 //componentes
-import { HeaderComponent } from './components/header/header.component';
-import { FooterComponent } from './components/footer/footer.component';
+import { HeaderComponent } from './Components/header/header.component';
+import { FooterComponent } from './Components/footer/footer.component';
 
 //Angular Forms
 import { FormsModule } from '@angular/forms';
-import { CadastroCreateComponent } from './telas/cadastro/cadastro-create/cadastro-create.component';
+import { CadastroCreateComponent } from './Telas/cadastro/cadastro-create/cadastro-create.component';
+import { ProdutosCreateComponent } from './Telas/produtos/produtos-create/produtos-create.component';
+import { CadastroDeleteComponent } from './Telas/cadastro/cadastro-delete/cadastro-delete.component';
+import { CadastroReadComponent } from './Telas/cadastro/cadastro-read/cadastro-read.component';
+import { CadastroUpadateComponent } from './Telas/cadastro/cadastro-upadate/cadastro-upadate.component';
+import { CadastroTabelaComponent } from './Telas/cadastro/cadastro-tabela/cadastro-tabela.component';
+import { ProdutosDeleteComponent } from './Telas/produtos/produtos-delete/produtos-delete.component';
+import { ProdutosReadComponent } from './Telas/produtos/produtos-read/produtos-read.component';
+import { ProdutosUpdateComponent } from './Telas/produtos/produtos-update/produtos-update.component';
+import { ProdutosTabelaComponent } from './Telas/produtos/produtos-tabela/produtos-tabela.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     LoginComponent,
-    ProdutosComponent,
     ContatoComponent,
     HeaderComponent,
     FooterComponent,
-    CadastroCreateComponent
+    CadastroCreateComponent,
+    ProdutosCreateComponent,
+    CadastroDeleteComponent,
+    CadastroReadComponent,
+    CadastroUpadateComponent,
+    CadastroTabelaComponent,
+    ProdutosDeleteComponent,
+    ProdutosReadComponent,
+    ProdutosUpdateComponent,
+    ProdutosTabelaComponent
   ],
   imports: [
     BrowserModule,
