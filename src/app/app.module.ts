@@ -13,6 +13,8 @@ import { ContatoComponent } from './Telas/contato/contato.component';
 //componentes
 import { HeaderComponent } from './Components/header/header.component';
 import { FooterComponent } from './Components/footer/footer.component';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { HttpClientModule } from '@angular/common/http';
 
 //Angular Forms
 import { FormsModule } from '@angular/forms';
@@ -50,7 +52,9 @@ import { ProdutosTabelaComponent } from './Telas/produtos/produtos-tabela/produt
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    FormsModule
+    FormsModule,
+    MatSnackBarModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

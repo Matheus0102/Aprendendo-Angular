@@ -1,1 +1,16 @@
-
+<div class="corpo">
+    <form>
+        <div class="Tela-Login">
+            <h1>Cadastra-se</h1>
+            <input type="text" name="nome" [(ngModel)]="cadastro.nome" placeholder="Nome" id="nome">
+            <br><br>
+            <input type="Password" name="senha" [(ngModel)]="cadastro.senha" placeholder="Senha" id="senha">
+            <br><br>
+            <button (click)="createCadastro()">Enviar</button>
+            <button (click)="cancelarCadastro()">Cancelar</button>
+            <a href="/cadastro-read">
+                <button (click)="tabelasCadastro()" type="button">Mostrar Cadastros</button>
+            </a>
+        </div>
+    </form>
+</div>

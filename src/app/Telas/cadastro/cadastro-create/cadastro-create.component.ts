@@ -11,9 +11,27 @@ import { NgForm } from '@angular/forms';
 })
 export class CadastroCreateComponent implements OnInit {
 
-  constructor() { }
+  cadastro: Cadastro = {
+    nome:'',
+    senha:''
+  }
+
+  constructor(private cadastroService: CadastroService, private router: Router) { }
 
   ngOnInit(): void {
   }
 
+  createCadastro(): void{
+    this.cadastroService.create(this.cadastro).subscribe(() => {
+    this.cadastroService.showMessege('Usuario Cadastrado')
+    })
+  }
+  
+  cancelarCadastro(): void{
+    this.router.navigate([''])
+  }
+
+  tabelasCadastro(): void{
+    this.router.navigate(['/cadastro/cadastro-tabela'])
+  }
 }

@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CadastroReadComponent } from './Telas/cadastro/cadastro-read/cadastro-read.component';
+import { CadastroCreateComponent } from './Telas/cadastro/cadastro-create/cadastro-create.component';
 import { ContatoComponent } from './Telas/contato/contato.component';
 import { HomeComponent } from './Telas/home/home.component';
 import { LoginComponent } from './Telas/login/login.component';
 import { ProdutosReadComponent } from './Telas/produtos/produtos-read/produtos-read.component';
-import { CadastroTabelaComponent } from './Telas/cadastro/cadastro-tabela/cadastro-tabela.component';
+import { CadastroReadComponent } from './Telas/cadastro/cadastro-read/cadastro-read.component';
 
 const routes: Routes = [
   {
@@ -27,10 +27,10 @@ const routes: Routes = [
     path: 'login', component: LoginComponent
   },
   {
-    path: 'cadastro', component: CadastroReadComponent
+    path: 'cadastro', component: CadastroCreateComponent
   },
   {
-    path:'cadastrotabela', component: CadastroTabelaComponent
+    path:'cadastro-read', component: CadastroReadComponent
   }
 ];
 @NgModule({
