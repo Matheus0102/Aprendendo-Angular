@@ -6,6 +6,7 @@ import { HomeComponent } from './Telas/home/home.component';
 import { LoginComponent } from './Telas/login/login.component';
 import { ProdutosReadComponent } from './Telas/produtos/produtos-read/produtos-read.component';
 import { CadastroReadComponent } from './Telas/cadastro/cadastro-read/cadastro-read.component';
+import { CadastroTabelaComponent } from './Telas/cadastro/cadastro-tabela/cadastro-tabela.component';
 
 const routes: Routes = [
   {
@@ -31,6 +32,9 @@ const routes: Routes = [
   },
   {
     path:'cadastro-read', component: CadastroReadComponent
+  },
+  {
+    path:'cadastro-tabela', component: CadastroTabelaComponent
   }
 ];
 @NgModule({

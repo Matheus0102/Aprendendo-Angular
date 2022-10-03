@@ -1,1 +1,36 @@
-<p>cadastro-delete works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6" style="margin: 0 auto;">
+            <form>
+                <div class="form-row">
+                    <div class="form-group col-md-12">
+                        <mat-form-field>
+                            <label>Nome</label>
+                            <input type="email" class="form-control" matInput [value]="cadastro.nome" name="nome" disabled>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="form-group">                  
+                    <mat-form-field>
+                        <label>Senha</label>
+                        <input type="senha" class="form-control" matInput [value]="cadastro.senha" name="senha" disabled>
+                    </mat-form-field>                   
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-12 d-flex justify-content-center" style="margin: 0 auto;">
+                        <hr class="mb-4">
+                        <div class="col-12 col-md-4 p-0">
+                            <button class="btn btn-cadastrar" (click)="deleteCadastro()" color="warn">Deletar</button>
+                        </div>
+                        <div class="col-12 col-md-3 p-0">
+                            <button class="btn btn-cadastrar" (click)="cancelarCadastro()" color="accent">Cancelar</button>
+                        </div>
+                        <div class="col-12 col-md-5 p-0">
+                            <button class="btn btn-cadastrar" (click)="tabelasCadastro()" color="accent">Todos os Cadastro</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatIconModule } from '@angular/material/icon';
+
 
 //Telas
 import { HomeComponent } from './Telas/home/home.component';
@@ -28,6 +29,8 @@ import { ProdutosDeleteComponent } from './Telas/produtos/produtos-delete/produt
 import { ProdutosReadComponent } from './Telas/produtos/produtos-read/produtos-read.component';
 import { ProdutosUpdateComponent } from './Telas/produtos/produtos-update/produtos-update.component';
 import { ProdutosTabelaComponent } from './Telas/produtos/produtos-tabela/produtos-tabela.component';
+
+
 
 @NgModule({
   declarations: [
@@ -54,7 +57,8 @@ import { ProdutosTabelaComponent } from './Telas/produtos/produtos-tabela/produt
     BrowserAnimationsModule,
     FormsModule,
     MatSnackBarModule,
-    HttpClientModule
+    HttpClientModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

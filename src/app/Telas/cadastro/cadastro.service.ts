@@ -3,7 +3,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { HttpClient } from '@angular/common/http';
 import { map, catchError } from 'rxjs/operators';
 import { Cadastro } from './cadastro.model';
-import { Observable, observable } from 'rxjs';
+import { EMPTY, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -12,11 +12,6 @@ import { Observable, observable } from 'rxjs';
 export class CadastroService {
 
   baseUrl = "http://localhost:3001/login" 
-
-
-  // create(cadastro: Cadastro) {
-  //   throw new Error('Method not implemented.');
-  // }
 
   constructor(private snackBar: MatSnackBar, private http: HttpClient ) {
     }
@@ -29,8 +24,34 @@ export class CadastroService {
     }
 
     create(cadastro: Cadastro): Observable<Cadastro>{
-      return this.http.post<Cadastro>(this.baseUrl, cadastro)
+      return this.http.post<Cadastro>(this.baseUrl, cadastro).pipe(
+        map((obj) => obj),
+        catchError(e => this.errorMsg(e))
+      )
     }
 
+    errorMsg(e: any): Observable<any>{
+      console.log(e);
+      this.showMessege('Erro', true);
+      return EMPTY
+    }
 
+    read(): Observable<Cadastro[]>{
+      return this.http.get<Cadastro[]>(this.baseUrl)
+    }
+
+    readById(id: number): Observable<Cadastro>{
+      const url = `${this.baseUrl}/${id}`
+      return this.http.get<Cadastro>(url)
+    }
+
+    updateCadastro(cadastro: Cadastro): Observable<Cadastro>{
+      const url = `${this.baseUrl}/${cadastro.id}`
+      return this.http.put<Cadastro>(url, cadastro)
+    }
+
+    deleteCadastro(id: number): Observable<Cadastro>{
+      const url = `${this.baseUrl}/${id}`
+        return this.http.delete<Cadastro>(url)
+    }
 }
