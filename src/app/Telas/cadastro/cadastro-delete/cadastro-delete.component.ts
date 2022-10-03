@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CadastroService } from '../cadastro.service';
 import { Router, ActivatedRoute } from '@angular/router';
-import { Cadastro } from '../cadastro.model';
-
+import { Cadastro } from '../cadastro.model'; 
 
 @Component({
   selector: 'app-cadastro-delete',
@@ -15,20 +14,30 @@ export class CadastroDeleteComponent implements OnInit {
 
   constructor(private cadastroService: CadastroService,
     private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
   ) { }
 
   ngOnInit(): void {
-    const id = +this.route.snapshot.paramMap.get('id');
-    this.cadastroService.readById(id).subscribe((cadastro) => {
-      this.cadastro = cadastro;
-    })
+    const id = this.route.snapshot.paramMap.get('id');
+    if (id != null){
+      this.cadastroService.readById(+id).subscribe((cadastro) => {
+        this.cadastro = cadastro;
+      })
+    }
   }
 
   deleteCadastro(): void {
     this.cadastroService.deleteCadastro(this.cadastro.id).subscribe(() => {
       this.cadastroService.showMessege('Cadastro deletado')
     });
+  }
+
+  cancelarCadastro(): void {
+    this.router.navigate([''])
+  }
+
+  tabelasCadastro(): void{
+    this.router.navigate(['/cadastro/cadastro-tabela'])
   }
 
 }

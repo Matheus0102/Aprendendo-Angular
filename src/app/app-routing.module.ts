@@ -7,6 +7,8 @@ import { LoginComponent } from './Telas/login/login.component';
 import { ProdutosReadComponent } from './Telas/produtos/produtos-read/produtos-read.component';
 import { CadastroReadComponent } from './Telas/cadastro/cadastro-read/cadastro-read.component';
 import { CadastroTabelaComponent } from './Telas/cadastro/cadastro-tabela/cadastro-tabela.component';
+import { CadastroUpadateComponent } from './Telas/cadastro/cadastro-upadate/cadastro-upadate.component';
+import { CadastroDeleteComponent } from './Telas/cadastro/cadastro-delete/cadastro-delete.component';
 
 const routes: Routes = [
   {
@@ -31,10 +33,16 @@ const routes: Routes = [
     path: 'cadastro', component: CadastroCreateComponent
   },
   {
-    path:'cadastro-read', component: CadastroReadComponent
+    path:'cadastro/cadastro-read', component: CadastroReadComponent
   },
   {
-    path:'cadastro-tabela', component: CadastroTabelaComponent
+    path:'cadastro/cadastro-tabela', component: CadastroTabelaComponent
+  },
+  {
+    path:'cadastro/cadastro-upadate/:id', component: CadastroUpadateComponent
+  },
+  {
+    path:'cadastro/cadastro-delete/:id', component: CadastroDeleteComponent
   }
 ];
 @NgModule({

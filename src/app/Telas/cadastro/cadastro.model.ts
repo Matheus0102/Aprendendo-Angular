@@ -1,5 +1,5 @@
-export interface Cadastro{
-    id?: number
-    nome: string
+export interface Cadastro {
+    id?: number,
+    nome: string,
     senha: string
 }

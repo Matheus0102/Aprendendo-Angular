@@ -10,14 +10,14 @@ import { CadastroService } from '../cadastro.service';
 
 export class CadastroTabelaComponent implements OnInit {
 
-  Cadastro: Cadastro[] | undefined
+  cadastros: Cadastro[]
   displayedColumns = ['id', 'nome', 'senha', 'action'];
 
   constructor(private cadastroService: CadastroService) { }
 
   ngOnInit(): void {
     this.cadastroService.read().subscribe(cadastros => {
-      this.Cadastro = cadastros
+      this.cadastros = cadastros
     })
   }
 

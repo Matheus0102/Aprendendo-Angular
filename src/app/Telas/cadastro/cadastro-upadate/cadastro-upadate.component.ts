@@ -18,10 +18,12 @@ export class CadastroUpadateComponent implements OnInit {
     ) { }
 
   ngOnInit(): void {
-    const id = +this.route.snapshot.paramMap.get('id')
-    this.cadastroService.readById(id).subscribe(cadastro => {
-      this.cadastro = cadastro
-    });
+    const id = this.route.snapshot.paramMap.get('id');
+    if (id != null){
+      this.cadastroService.readById(+id).subscribe(cadastro => {
+        this.cadastro = cadastro
+      }); 
+    }
   }
 
   updateCadastro(): void{
@@ -36,7 +38,7 @@ export class CadastroUpadateComponent implements OnInit {
 
   }
 
-  tabelasCadastro(): void{
+  tabelaCadastro(): void{
     this.router.navigate(['/cadastro/tabela'])
   }
 }
