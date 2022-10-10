@@ -17,7 +17,7 @@ export class CadastroService {
     }
     showMessege(msg: string, isError: boolean = false) : void{
       this.snackBar.open(msg, 'X', {
-        duration: 600,
+        duration: 1000,
         verticalPosition: "top",
         panelClass: isError ? ['errorMsg'] : ['successMsg']
       });
@@ -33,6 +33,7 @@ export class CadastroService {
     errorMsg(e: any): Observable<any>{
       console.log(e);
       this.showMessege('Erro', true);
+      this.showMessege('Erro de Cadastro', true);
       return EMPTY
     }
 

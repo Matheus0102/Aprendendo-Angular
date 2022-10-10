@@ -18,6 +18,6 @@ export class LoginComponent implements OnInit {
       nome: ${form.value.nome}
       senha: ${form.value.senha}`;
 
-      console.log(dados);
+      console.log(dados); 
    }
 }

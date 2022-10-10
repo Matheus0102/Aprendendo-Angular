@@ -1,3 +1,10 @@
+h1{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    color: White;
+}
+
 .titulo{
     font-family: roboto;
     font-size: 60px;
