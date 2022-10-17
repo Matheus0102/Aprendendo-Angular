@@ -29,6 +29,21 @@
       "nome": "Ana",
       "senha": "Ana",
       "id": 6
+    },
+    {
+      "nome": "Administrador",
+      "senha": "Admin1234",
+      "id": 7
+    },
+    {
+      "nome": "Administrador",
+      "senha": "Admin1234",
+      "id": 8
+    },
+    {
+      "nome": "Administrador",
+      "senha": "Admin1234",
+      "id": 9
     }
   ],
   "Produtos": [

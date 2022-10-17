@@ -6,11 +6,9 @@
             <br><br>
             <input type="Password" name="senha" [(ngModel)]="cadastro.senha" placeholder="Senha" id="senha">
             <br><br>
-            <button (click)="createCadastro()">Enviar</button>
+            <button id="enviar" (click)="createCadastro()">Enviar</button>
             <button (click)="cancelarCadastro()">Cancelar</button>
-            <a href="/cadastro-read">
-                <button (click)="tabelasCadastro()" type="button">Mostrar Cadastros</button>
-            </a>
+            <button id="mostrarCadastro" (click)="tabelasCadastro()" type="button">Mostrar Cadastros</button>
         </div>
     </form>
 </div>
